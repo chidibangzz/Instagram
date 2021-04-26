@@ -17,6 +17,7 @@ const config = {
 const firebase = Firebase.initializeApp(config);
 const { FieldValue } = Firebase.firestore;
 
+// here is where I call the seed file only once, once imported in firebase then comment out below line
 // seedDatabase(firebase);
 
 export { firebase, FieldValue };
