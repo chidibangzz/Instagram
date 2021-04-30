@@ -18,8 +18,8 @@ export default function usePhotos() {
       if (following.length > 0) {
         followedUserPhotos = await getPhotos(userId, following);
       }
-      // gets newest photos in the arrap
-      followedUserPhotos.sort((a, b) => b.dateCreated - a.dateCreated);
+      // re-arranges array to be newest photos first by date created.
+      //   followedUserPhotos.sort((a, b) => b.dateCreated - a.dateCreated);
       setPhotos(followedUserPhotos);
     }
 
