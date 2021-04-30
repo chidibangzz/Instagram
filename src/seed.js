@@ -19,7 +19,7 @@ export function seedDatabase(firebase) {
         fullName: 'Raffaello Sanzio da Urbino',
         emailAddress: 'raphael@sanzio.com',
         following: [],
-        followers: ['s8PG0WCHHLahH6to5yhW79UhuAq2'],
+        followers: ['3IH8gN86ecedV6upc4jfeJOFW8i1'],
         dateCreated: Date.now()
       },
       {
@@ -28,7 +28,7 @@ export function seedDatabase(firebase) {
         fullName: 'Salvador Dalí',
         emailAddress: 'salvador@dali.com',
         following: [],
-        followers: ['s8PG0WCHHLahH6to5yhW79UhuAq2'],
+        followers: ['3IH8gN86ecedV6upc4jfeJOFW8i1'],
         dateCreated: Date.now()
       },
       {
@@ -37,7 +37,7 @@ export function seedDatabase(firebase) {
         fullName: 'George Orwell',
         emailAddress: 'george@orwell.com',
         following: [],
-        followers: ['s8PG0WCHHLahH6to5yhW79UhuAq2'],
+        followers: ['3IH8gN86ecedV6upc4jfeJOFW8i1'],
         dateCreated: Date.now()
       }
     ];
