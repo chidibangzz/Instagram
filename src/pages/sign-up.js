@@ -27,7 +27,7 @@ export default function SignUp() {
           .createUserWithEmailAndPassword(emailAddress, password);
 
         // authentification looking for uuid and putting it in firestore
-        // -> emailAdress & password & username
+        // -> emailAddress & password & username
         await createdUserResult.user.updateProfile({
           displayName: username
         });
@@ -37,7 +37,7 @@ export default function SignUp() {
           userId: createdUserResult.user.uid,
           username: username.toLowerCase(),
           fullName,
-          emailAdress: emailAddress.toLowerCase(),
+          emailAddress: emailAddress.toLowerCase(),
           following: [],
           dateCreated: Date.now()
         });
