@@ -58,7 +58,7 @@ export async function updateLoggedInUserFollowing(
   .doc(loggedInUserDocId)
   .update({
     following: isFollowingProfile
-    ? FieldValue.arrayReomve(profileId)
+    ? FieldValue.arrayRemove(profileId)
     : FieldValue.arrayUnion(profileId)
   })
 }
@@ -76,7 +76,7 @@ export async function updateFollowedUserFollowers(
   .doc(profileDocId)
   .update({
     followers: isFollowingProfile
-    ? FieldValue.arrayReomve(loggedInUserDocId)
+    ? FieldValue.arrayRemove(loggedInUserDocId)
     : FieldValue.arrayUnion(loggedInUserDocId)
   })
 }
@@ -141,4 +141,18 @@ export async function isUserFollowingProfile(loggedInUsername, profileUserId) {
   console.log('response', response);
 
   return response.userId
+}
+
+
+export async function toggleFollow(isFollowingProfile, activeUserDocId, profileDocId, profileUserId, followingUserId) {
+
+  // 1st param: karls doc id
+  // 2nd param: raphael's user id
+  // 3rd param: is the user following theis profile? e.g does karl follow raphael? (true/false)
+  await updateLoggedInUserFollowing(activeUserDocId, profileUserId, isFollowingProfile);
+  // 1st param: karls user id
+  // 2nd param: raphael's doc id
+  // 3rd param: is the user following theis profile? e.g does karl follow raphael? (true/false)
+
+  await updateFollowedUserFollowers(profileDocId, followingUserId, isFollowingProfile);
 }
