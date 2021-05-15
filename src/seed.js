@@ -73,5 +73,30 @@ export function seedDatabase(firebase) {
           dateCreated: Date.now()
         });
     }
+    for (let i = 1; i <= 4; ++i) {
+      firebase
+        .firestore()
+        .collection('photos')
+        .add({
+          photoId: i,
+          userId: '4',
+          imageSrc: `/images/users/orwell/${i}.jpeg`,
+          caption: 'My favorite anime games',
+          likes: [],
+          comments: [
+            {
+              displayName: 'dali',
+              comment: 'Love this place, looks like my animal farm!'
+            },
+            {
+              displayName: 'orwell',
+              comment: 'Would you mind if I used this picture?'
+            }
+          ],
+          userLatitude: '40.7128°',
+          userLongitude: '74.0060°',
+          dateCreated: Date.now()
+        });
+    }
   }
   
