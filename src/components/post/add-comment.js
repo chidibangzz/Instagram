@@ -15,10 +15,7 @@ export default function AddComment({ docId, comments, setComments, commentInput 
 
     setComments([...comments, { displayName, comment }]);
     setComment('');
-    // give me a new array [], what line 16 is doing
-    // put the new comments in there ,what line 16 is doing
-    // add the old comments , what line 16 is doing
-    // then we have a array with the new comments, what line 16 is doing
+
     return firebase
       .firestore()
       .collection('photos')
@@ -43,7 +40,7 @@ export default function AddComment({ docId, comments, setComments, commentInput 
           className="text-sm text-gray-base w-full mr-3 py-5 px-4"
           type="text"
           name="add-comment"
-          placeholder="Add a comment"
+          placeholder="Add a comment..."
           value={comment}
           onChange={({ target }) => setComment(target.value)}
           ref={commentInput}
@@ -60,9 +57,10 @@ export default function AddComment({ docId, comments, setComments, commentInput 
     </div>
   );
 }
+
 AddComment.propTypes = {
   docId: PropTypes.string.isRequired,
   comments: PropTypes.array.isRequired,
   setComments: PropTypes.func.isRequired,
-  commentInput: PropTypes.object.isRequired
+  commentInput: PropTypes.object
 };
