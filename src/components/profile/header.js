@@ -57,7 +57,7 @@ export default function Header({
           <img
             className="rounded-full h-40 w-40 flex"
             alt="chidi's profile picture"
-            src="/images/avatars/joe.jpeg"
+            src="/images/avatars/chidi.jpeg"
           />
         )}
       </div>

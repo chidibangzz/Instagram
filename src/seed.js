@@ -6,8 +6,8 @@ export function seedDatabase(firebase) {
     const users = [
       {
         userId: '3IH8gN86ecedV6upc4jfeJOFW8i1',
-        username: 'karl',
-        fullName: 'Karl Hadwen',
+        username: 'chidi',
+        fullName: 'chidi ekeke',
         emailAddress: 'karlhadwen@gmail.com',
         following: ['2'],
         followers: ['2', '3', '4'],
@@ -55,7 +55,7 @@ export function seedDatabase(firebase) {
         .add({
           photoId: i,
           userId: '2',
-          imageSrc: `/images/users/raphael/${i}.jpg`,
+          imageSrc: `/images/users/raphael/${i}.jpeg`,
           caption: 'Saint George and the Dragon',
           likes: [],
           comments: [
